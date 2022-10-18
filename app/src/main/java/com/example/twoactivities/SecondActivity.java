@@ -7,7 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import java.text.BreakIterator;
+
 public class SecondActivity extends AppCompatActivity {
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,8 +26,10 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     public void returnReply(View view) {
+        BreakIterator mReply = null;
         String reply = mReply.getText().toString();
         Intent replyIntent = new Intent();
+        String EXTRA_REPLY="";
         replyIntent.putExtra(EXTRA_REPLY, reply);
         setResult(RESULT_OK, replyIntent);
         finish();
