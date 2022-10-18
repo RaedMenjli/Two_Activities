@@ -12,7 +12,8 @@ import java.text.BreakIterator;
 public class SecondActivity extends AppCompatActivity {
 
 
-
+    public static final String EXTRA_REPLY1 = "a";
+    public static final String EXTRA_REPLY2 = "b";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,8 +30,7 @@ public class SecondActivity extends AppCompatActivity {
         BreakIterator mReply = null;
         String reply = mReply.getText().toString();
         Intent replyIntent = new Intent();
-        String EXTRA_REPLY="";
-        replyIntent.putExtra(EXTRA_REPLY, reply);
+        replyIntent.putExtra(EXTRA_REPLY1, reply);
         setResult(RESULT_OK, replyIntent);
         finish();
     }
