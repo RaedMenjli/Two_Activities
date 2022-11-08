@@ -50,7 +50,8 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == TEXT_REQUEST) {
             if (resultCode == RESULT_OK) {
                 String reply =
-                        data.getStringExtra(SecondActivity.EXTRA_REPLY2);
+                        data.getStringExtra(SecondActivity.EXTRA_REPLY);
+                Log.d("reply1", reply);
                 mReplyHeadTextView.setVisibility(View.VISIBLE);
                 mReplyTextView.setText(reply);
                 mReplyTextView.setVisibility(View.VISIBLE);
